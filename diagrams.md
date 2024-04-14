@@ -88,6 +88,90 @@ class Специалист {
 @enduml
 ```
 
+### Код интерфейся бота сгенерированный на основе диаграммы классов ###
+
+```
+import SwiftUI
+
+// Модель новости
+struct News {
+    var title: String
+    var text: String
+    
+    func getTitle() -> String {
+        return title
+    }
+    
+    func getText() -> String {
+        return text
+    }
+}
+
+// Модель услуги
+struct Service {
+    var name: String
+    var description: String
+    
+    func getName() -> String {
+        return name
+    }
+    
+    func getDescription() -> String {
+        return description
+    }
+}
+
+// Модель специалиста
+struct Specialist {
+    var name: String
+    var specialty: String
+    
+    func getName() -> String {
+        return name
+    }
+    
+    func getSpecialty() -> String {
+        return specialty
+    }
+}
+
+// Телеграм-бот
+struct TelegramBot {
+    var news: [News]
+    var services: [Service]
+    var specialists: [Specialist]
+    
+    func showNews() {
+        // Логика показа новостей
+    }
+    
+    func showServices() {
+        // Логика показа услуг
+    }
+    
+    func chooseSpecialist() {
+        // Логика выбора специалиста
+    }
+    
+    func chooseService() {
+        // Логика выбора услуги
+    }
+}
+
+struct ContentView: View {
+    var body: some View {
+        // Тут размещаем код SwiftUI для интерфейса
+        Text("Пример интерфейса для Telegram-бота консультаций клиентов косметологической клиники")
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+```
+
 ## Диаграмма последовательности ##
 
 Диаграмма последовательности изображает взаимодействие между клиентом, Telegram-ботом и косметологической клиникой. Она показывает, как клиент взаимодействует с ботом для просмотра новостей, услуг, специалистов и совершения выбора, а бот общается с клиникой для получения соответствующей информации.
